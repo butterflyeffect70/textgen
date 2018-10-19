@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  header
+    h1 #{title} 
+    //- or h1=title
+    p Welcome to #{title}
+  article
+    form(method='POST' action='/result')
+      p
+        label(for='text') Text:
+        br
+        input(type='text', name='text')
+      p
+        label(for='number') Anzahl:
+        br
+        input(type='number', name='number')
+      button.btn.btn-primary(type='submit') Sign up
+  footer
